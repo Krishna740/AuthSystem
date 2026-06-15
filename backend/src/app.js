@@ -8,20 +8,7 @@ import ApiError from './utils/ApiError.js';
 
 const app = express();
 
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'", "'unsafe-eval'"],
-        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-        fontSrc: ["'self'", "https://fonts.gstatic.com"],
-        imgSrc: ["'self'", "data:"],
-        connectSrc: ["'self'", env.clientUrl],
-      },
-    },
-  })
-);
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({ origin: env.clientUrl, credentials: true }));
 app.use(express.json({ limit: '10kb' }));
 
