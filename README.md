@@ -1,5 +1,9 @@
 # AuthSystem
 
+**Live Demo:** [https://auth-system-mu-eight.vercel.app](https://auth-system-mu-eight.vercel.app)
+
+**Source Code:** [https://github.com/Krishna740/AuthSystem](https://github.com/Krishna740/AuthSystem)
+
 A full-stack authentication system with signup, login, profile management, and JWT refresh token mechanism.
 
 Built with React frontend, Node.js + Express backend, and MongoDB Atlas.
